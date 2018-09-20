@@ -1,0 +1,1279 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width initial-scale=1'>
+    <title>terms.md</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet'
+        type='text/css' />
+    <style type='text/css'>
+        html {
+            overflow-x: initial !important;
+        }
+
+        #write,
+        body {
+            height: auto;
+        }
+
+        #write,
+        #write h1,
+        #write h2,
+        #write h3,
+        #write h4,
+        #write h5,
+        #write h6,
+        #write ol,
+        #write p,
+        #write ul {
+            position: relative;
+        }
+
+        #write,
+        #write h1,
+        #write h2,
+        #write h3,
+        #write h4,
+        #write h5,
+        #write h6,
+        #write p,
+        #write pre {
+            width: inherit;
+        }
+
+        /* #write,
+        pre {
+            white-space: pre-wrap;
+        } */
+
+        .CodeMirror,
+        .md-fences,
+        table {
+            text-align: left;
+        }
+
+        .md-reset,
+        a:active,
+        a:hover {
+            outline: 0px;
+        }
+
+        .md-reset,
+        .md-toc-item a {
+            text-decoration: none;
+        }
+
+        .MathJax_SVG,
+        .md-reset {
+            float: none;
+            direction: ltr;
+        }
+
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+        }
+
+        html {
+            font-size: 14px;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            margin: 0px;
+            padding: 0px;
+            bottom: 0px;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            font-size: 1rem;
+            line-height: 1.42857143;
+            overflow-x: hidden;
+            background-image: inherit;
+            background-size: inherit;
+            background-attachment: inherit;
+            background-origin: inherit;
+            background-clip: inherit;
+            background-color: inherit;
+            background-position: inherit inherit;
+            background-repeat: inherit inherit;
+        }
+
+        .in-text-selection,
+        ::selection {
+            background-color: rgb(181, 214, 252);
+            text-shadow: none;
+            background-position: initial initial;
+            background-repeat: initial initial;
+        }
+
+        #write {
+            margin: 0px auto;
+            word-break: normal;
+            word-wrap: break-word;
+            padding-bottom: 70px;
+            overflow-x: visible;
+        }
+
+        .first-line-indent #write p .md-line {
+            text-indent: 0px;
+        }
+
+        .first-line-indent #write li,
+        .first-line-indent #write p,
+        .first-line-indent #write p .md-line:first-child {
+            text-indent: 2em;
+        }
+
+        .for-image #write {
+            padding-left: 8px;
+            padding-right: 8px;
+        }
+
+        body.typora-export {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        @media screen and (max-width: 500px) {
+            body.typora-export {
+                padding-left: 0px;
+                padding-right: 0px;
+            }
+            .CodeMirror-sizer {
+                margin-left: 0px !important;
+            }
+            .CodeMirror-gutters {
+                display: none !important;
+            }
+        }
+
+        #write>blockquote:first-child,
+        #write>div:first-child,
+        #write>ol:first-child,
+        #write>p:first-child,
+        #write>pre:first-child,
+        #write>table:first-child,
+        #write>ul:first-child {
+            margin-top: 30px;
+        }
+
+        #write li>table:first-child {
+            margin-top: -20px;
+        }
+
+        img {
+            max-width: 100%;
+            vertical-align: middle;
+        }
+
+        button,
+        input,
+        select,
+        textarea {
+            color: inherit;
+            font-family: inherit;
+            font-size: inherit;
+            font-style: inherit;
+            font-variant-caps: inherit;
+            font-weight: inherit;
+            font-stretch: inherit;
+            line-height: inherit;
+        }
+
+        input[type="checkbox"],
+        input[type="radio"] {
+            line-height: normal;
+            padding: 0px;
+        }
+
+        *,
+        ::after,
+        ::before {
+            box-sizing: border-box;
+        }
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        h3 {
+            font-size: 1.6rem;
+        }
+
+        h4 {
+            font-size: 1.4rem;
+        }
+
+        h5 {
+            font-size: 1.2rem;
+        }
+
+        h6 {
+            font-size: 1rem;
+        }
+
+        p {
+            -webkit-margin-before: 1rem;
+            -webkit-margin-after: 1rem;
+            -webkit-margin-start: 0px;
+            -webkit-margin-end: 0px;
+        }
+
+        .mathjax-block {
+            margin-top: 0px;
+            margin-bottom: 0px;
+            -webkit-margin-before: 0px;
+            -webkit-margin-after: 0px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .md-blockmeta {
+            color: rgb(204, 204, 204);
+            font-weight: 700;
+            font-style: italic;
+        }
+
+        a {
+            cursor: pointer;
+        }
+
+        sup.md-footnote {
+            padding: 2px 4px;
+            background-color: rgba(238, 238, 238, 0.701961);
+            color: rgb(85, 85, 85);
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+            border-bottom-left-radius: 4px;
+        }
+
+        #write input[type="checkbox"] {
+            cursor: pointer;
+            width: inherit;
+            height: inherit;
+        }
+
+        #write>figure:first-child {
+            margin-top: 16px;
+        }
+
+        figure {
+            overflow-x: auto;
+            margin: -8px 0px 0px -8px;
+            max-width: calc(100% + 16px);
+            padding: 8px;
+        }
+
+        tr {
+            break-inside: avoid;
+            break-after: auto;
+        }
+
+        thead {
+            display: table-header-group;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0px;
+            width: 100%;
+            overflow: auto;
+            break-inside: auto;
+        }
+
+        .CodeMirror-line,
+        .md-fences {
+            break-inside: avoid;
+        }
+
+        table.md-table td {
+            min-width: 80px;
+        }
+
+        .CodeMirror-gutters {
+            border-right-width: 0px;
+            background-color: inherit;
+            margin-right: 4px;
+        }
+
+        .CodeMirror-placeholder {
+            opacity: 0.3;
+        }
+
+        .CodeMirror pre {
+            padding: 0px 4px;
+        }
+
+        .CodeMirror-lines {
+            padding: 0px;
+        }
+
+        div.hr:focus {
+            cursor: none;
+        }
+
+        .md-fences {
+            font-size: 0.9rem;
+            display: block;
+            overflow: visible;
+            white-space: pre;
+            background-image: inherit;
+            background-size: inherit;
+            background-attachment: inherit;
+            background-origin: inherit;
+            background-clip: inherit;
+            background-color: inherit;
+            position: relative !important;
+            background-position: inherit inherit;
+            background-repeat: inherit inherit;
+        }
+
+        .md-diagram-panel {
+            width: 100%;
+            margin-top: 10px;
+            text-align: center;
+            padding-top: 0px;
+            padding-bottom: 8px;
+            overflow-x: auto;
+        }
+
+        .md-fences .CodeMirror.CodeMirror-wrap {
+            top: -1.6em;
+            margin-bottom: -1.6em;
+        }
+
+        .md-fences.mock-cm {
+            white-space: pre-wrap;
+        }
+
+        .show-fences-line-number .md-fences {
+            padding-left: 0px;
+        }
+
+        .show-fences-line-number .md-fences.mock-cm {
+            padding-left: 40px;
+        }
+
+        .footnotes {
+            opacity: 0.8;
+            font-size: 0.9rem;
+            margin-top: 1em;
+            margin-bottom: 1em;
+        }
+
+        .footnotes+.footnotes {
+            margin-top: 0px;
+        }
+
+        .md-reset {
+            margin: 0px;
+            padding: 0px;
+            border: 0px;
+            vertical-align: top;
+            text-shadow: none;
+            position: static;
+            width: auto;
+            height: auto;
+            white-space: nowrap;
+            cursor: inherit;
+            line-height: normal;
+            font-weight: 400;
+            text-align: left;
+            box-sizing: content-box;
+            background-position: 0px 0px;
+            background-repeat: initial initial;
+        }
+
+        .md-toc-inner,
+        a img,
+        img a {
+            cursor: pointer;
+        }
+
+        li div {
+            padding-top: 0px;
+        }
+
+        blockquote {
+            margin: 1rem 0px;
+        }
+
+        li .mathjax-block,
+        li p {
+            margin: 0.5rem 0px;
+        }
+
+        li {
+            margin: 0px;
+            position: relative;
+        }
+
+        blockquote> :last-child {
+            margin-bottom: 0px;
+        }
+
+        blockquote> :first-child {
+            margin-top: 0px;
+        }
+
+        .footnotes-area {
+            color: rgb(136, 136, 136);
+            margin-top: 0.714rem;
+            padding-bottom: 0.143rem;
+            white-space: nowrap;
+        }
+
+        @media print {
+            body,
+            html {
+                border: 1px solid transparent;
+                height: 99%;
+                break-after: avoid-page;
+                break-before: avoid-page;
+            }
+            #write {
+                margin-top: 0px;
+                border-color: transparent !important;
+            }
+            .typora-export * {
+                -webkit-print-color-adjust: exact;
+            }
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                break-after: avoid-page;
+                orphans: 2;
+            }
+            p {
+                orphans: 4;
+            }
+            html.blink-to-pdf {
+                font-size: 13px;
+            }
+            .typora-export #write {
+                padding-left: 1cm;
+                padding-right: 1cm;
+                padding-bottom: 0px;
+                break-after: avoid-page;
+            }
+            .typora-export #write::after {
+                height: 0px;
+            }
+            @page {
+                margin: 20mm 0px;
+            }
+        }
+
+        .footnote-line {
+            margin-top: 0.714em;
+            font-size: 0.7em;
+        }
+
+        pre.md-meta-block {
+            font-size: 0.8rem;
+            min-height: 0.8rem;
+            white-space: pre-wrap;
+            background-color: rgb(204, 204, 204);
+            display: block;
+            overflow-x: hidden;
+            background-position: initial initial;
+            background-repeat: initial initial;
+        }
+
+        p>img:only-child {
+            display: block;
+            margin: auto;
+        }
+
+        .md-line>.md-image:only-child,
+        p>.md-image:only-child {
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+        }
+
+        .mathjax-block:not(:empty)::after,
+        .md-toc-content::after,
+        .md-toc::after {
+            display: none;
+        }
+
+        #write .MathJax_Display {
+            margin: 0.8em 0px 0px;
+        }
+
+        .mathjax-block {
+            white-space: pre;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        p+.mathjax-block {
+            margin-top: -1.143rem;
+        }
+
+        [contenteditable="true"]:active,
+        [contenteditable="true"]:focus {
+            outline: 0px;
+            box-shadow: none;
+        }
+
+        .md-task-list-item {
+            position: relative;
+            list-style-type: none;
+        }
+
+        .task-list-item.md-task-list-item {
+            padding-left: 0px;
+        }
+
+        .md-task-list-item>input {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            margin-left: -1.2em;
+            margin-top: calc(1em - 10px);
+        }
+
+        .math {
+            font-size: 1rem;
+        }
+
+        .md-toc {
+            min-height: 3.58rem;
+            position: relative;
+            font-size: 0.9rem;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+
+        .MathJax_SVG,
+        .mathjax-block .MathJax_SVG_Display {
+            text-indent: 0px;
+            max-width: none;
+            max-height: none;
+            min-height: 0px;
+        }
+
+        .md-toc-content {
+            position: relative;
+            margin-left: 0px;
+        }
+
+        .md-toc-item {
+            display: block;
+            color: rgb(65, 131, 196);
+        }
+
+        .md-toc-inner:hover {}
+
+        .md-toc-inner {
+            display: inline-block;
+        }
+
+        .md-toc-h1 .md-toc-inner {
+            margin-left: 0px;
+            font-weight: 700;
+        }
+
+        .md-toc-h2 .md-toc-inner {
+            margin-left: 2em;
+        }
+
+        .md-toc-h3 .md-toc-inner {
+            margin-left: 4em;
+        }
+
+        .md-toc-h4 .md-toc-inner {
+            margin-left: 6em;
+        }
+
+        .md-toc-h5 .md-toc-inner {
+            margin-left: 8em;
+        }
+
+        .md-toc-h6 .md-toc-inner {
+            margin-left: 10em;
+        }
+
+        @media screen and (max-width: 48em) {
+            .md-toc-h3 .md-toc-inner {
+                margin-left: 3.5em;
+            }
+            .md-toc-h4 .md-toc-inner {
+                margin-left: 5em;
+            }
+            .md-toc-h5 .md-toc-inner {
+                margin-left: 6.5em;
+            }
+            .md-toc-h6 .md-toc-inner {
+                margin-left: 8em;
+            }
+        }
+
+        a.md-toc-inner {
+            font-size: inherit;
+            font-style: inherit;
+            font-weight: inherit;
+            line-height: inherit;
+        }
+
+        .footnote-line a:not(.reversefootnote) {
+            color: inherit;
+        }
+
+        .md-attr {
+            display: none;
+        }
+
+        .md-fn-count::after {
+            content: ".";
+        }
+
+        code,
+        pre,
+        tt {
+            font-family: var(--monospace);
+        }
+
+        .md-comment {
+            color: rgb(162, 127, 3);
+            opacity: 0.8;
+            font-family: var(--monospace);
+        }
+
+        code {
+            text-align: left;
+        }
+
+        a.md-print-anchor {
+            border: none !important;
+            display: inline-block !important;
+            position: absolute !important;
+            width: 1px !important;
+            right: 0px !important;
+            outline: 0px !important;
+            text-shadow: initial !important;
+            background-position: 0px 0px !important;
+            background-repeat: initial initial !important;
+        }
+
+        .md-inline-math .MathJax_SVG .noError {
+            display: none !important;
+        }
+
+        .mathjax-block .MathJax_SVG_Display {
+            text-align: center;
+            margin: 1em 0px;
+            position: relative;
+            min-width: 100%;
+            width: auto;
+            display: block !important;
+        }
+
+        .MathJax_SVG_Display,
+        .md-inline-math .MathJax_SVG_Display {
+            width: auto;
+            margin: inherit;
+            display: inline-block !important;
+        }
+
+        .MathJax_SVG .MJX-monospace {
+            font-family: monospace;
+        }
+
+        .MathJax_SVG .MJX-sans-serif {
+            font-family: sans-serif;
+        }
+
+        .MathJax_SVG {
+            display: inline;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            zoom: 90%;
+            text-align: left;
+            text-transform: none;
+            letter-spacing: normal;
+            word-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            min-width: 0px;
+            border: 0px;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .MathJax_SVG * {
+            transition: none;
+        }
+
+        .os-windows.monocolor-emoji .md-emoji {
+            font-family: "Segoe UI Symbol", sans-serif;
+        }
+
+        .md-diagram-panel>svg,
+        [lang="flow"] svg,
+        [lang="mermaid"] svg {
+            max-width: 100%;
+        }
+
+        [lang="mermaid"] .node text {
+            font-size: 1rem;
+        }
+
+        table tr th {
+            border-bottom-width: 0px;
+        }
+
+
+        :root {
+            --side-bar-bg-color: #fafafa;
+            --control-text-color: #777;
+        }
+
+        @include-when-export url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+        html {
+            font-size: 16px;
+        }
+
+        body {
+            font-family: "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            color: rgb(51, 51, 51);
+            line-height: 1.6;
+        }
+
+        #write {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 20px 30px 40px 30px;
+            padding-top: 20px;
+            padding-bottom: 100px;
+        }
+
+        #write>ul:first-child,
+        #write>ol:first-child {
+            margin-top: 30px;
+        }
+
+        body>*:first-child {
+            margin-top: 0 !important;
+        }
+
+        body>*:last-child {
+            margin-bottom: 0 !important;
+        }
+
+        a {
+            color: #4183C4;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            position: relative;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            font-weight: bold;
+            line-height: 1.4;
+            cursor: text;
+        }
+
+        h1:hover a.anchor,
+        h2:hover a.anchor,
+        h3:hover a.anchor,
+        h4:hover a.anchor,
+        h5:hover a.anchor,
+        h6:hover a.anchor {
+            /*background: url("file:///Users/yomybaby/Library/Application%20Support/images/modules/styleguide/para.png") no-repeat 10px center;*/
+            text-decoration: none;
+        }
+
+        h1 tt,
+        h1 code {
+            font-size: inherit;
+        }
+
+        h2 tt,
+        h2 code {
+            font-size: inherit;
+        }
+
+        h3 tt,
+        h3 code {
+            font-size: inherit;
+        }
+
+        h4 tt,
+        h4 code {
+            font-size: inherit;
+        }
+
+        h5 tt,
+        h5 code {
+            font-size: inherit;
+        }
+
+        h6 tt,
+        h6 code {
+            font-size: inherit;
+        }
+
+        h1 {
+            padding-bottom: .3em;
+            font-size: 2.25em;
+            line-height: 1.2;
+            border-bottom: 1px solid #eee;
+        }
+
+        h2 {
+            padding-bottom: .3em;
+            font-size: 1.75em;
+            line-height: 1.225;
+            border-bottom: 1px solid #eee;
+        }
+
+        h3 {
+            font-size: 1.5em;
+            line-height: 1.43;
+        }
+
+        h4 {
+            font-size: 1.25em;
+        }
+
+        h5 {
+            font-size: 1em;
+        }
+
+        h6 {
+            font-size: 1em;
+            color: #777;
+        }
+
+        p,
+        blockquote,
+        ul,
+        ol,
+        dl,
+        table {
+            margin: 0.8em 0;
+        }
+
+        li>ol,
+        li>ul {
+            margin: 0 0;
+        }
+
+        hr {
+            height: 4px;
+            padding: 0;
+            margin: 16px 0;
+            background-color: #e7e7e7;
+            border: 0 none;
+            overflow: hidden;
+            box-sizing: content-box;
+            border-bottom: 1px solid #ddd;
+        }
+
+        body>h2:first-child {
+            margin-top: 0;
+            padding-top: 0;
+        }
+
+        body>h1:first-child {
+            margin-top: 0;
+            padding-top: 0;
+        }
+
+        body>h1:first-child+h2 {
+            margin-top: 0;
+            padding-top: 0;
+        }
+
+        body>h3:first-child,
+        body>h4:first-child,
+        body>h5:first-child,
+        body>h6:first-child {
+            margin-top: 0;
+            padding-top: 0;
+        }
+
+        a:first-child h1,
+        a:first-child h2,
+        a:first-child h3,
+        a:first-child h4,
+        a:first-child h5,
+        a:first-child h6 {
+            margin-top: 0;
+            padding-top: 0;
+        }
+
+        h1 p,
+        h2 p,
+        h3 p,
+        h4 p,
+        h5 p,
+        h6 p {
+            margin-top: 0;
+        }
+
+        li p.first {
+            display: inline-block;
+        }
+
+        ul,
+        ol {
+            padding-left: 30px;
+        }
+
+        ul:first-child,
+        ol:first-child {
+            margin-top: 0;
+        }
+
+        ul:last-child,
+        ol:last-child {
+            margin-bottom: 0;
+        }
+
+        blockquote {
+            border-left: 4px solid #dddddd;
+            padding: 0 15px;
+            color: #777777;
+        }
+
+        blockquote blockquote {
+            padding-right: 0;
+        }
+
+        table {
+            padding: 0;
+            word-break: initial;
+        }
+
+        table tr {
+            border-top: 1px solid #cccccc;
+            margin: 0;
+            padding: 0;
+        }
+
+        table tr:nth-child(2n) {
+            background-color: #f8f8f8;
+        }
+
+        table tr th {
+            font-weight: bold;
+            border: 1px solid #cccccc;
+            border-bottom: 0;
+            text-align: left;
+            margin: 0;
+            padding: 6px 13px;
+        }
+
+        table tr td {
+            border: 1px solid #cccccc;
+            text-align: left;
+            margin: 0;
+            padding: 6px 13px;
+        }
+
+        table tr th:first-child,
+        table tr td:first-child {
+            margin-top: 0;
+        }
+
+        table tr th:last-child,
+        table tr td:last-child {
+            margin-bottom: 0;
+        }
+
+        .CodeMirror-gutters {
+            border-right: 1px solid #ddd;
+        }
+
+        .md-fences,
+        code,
+        tt {
+            border: 1px solid #ddd;
+            background-color: #f8f8f8;
+            border-radius: 3px;
+            padding: 0;
+            font-family: Consolas, "Liberation Mono", Courier, monospace;
+            padding: 2px 4px 0px 4px;
+            font-size: 0.9em;
+        }
+
+        .md-fences {
+            margin-bottom: 15px;
+            margin-top: 15px;
+            padding: 0.2em 1em;
+            padding-top: 8px;
+            padding-bottom: 6px;
+        }
+
+        .md-task-list-item>input {
+            margin-left: -1.3em;
+        }
+
+        @media screen and (min-width: 914px) {
+            /*body {
+        width: 854px;
+        margin: 0 auto;
+    }*/
+        }
+
+        @media print {
+            html {
+                font-size: 13px;
+            }
+            table,
+            pre {
+                page-break-inside: avoid;
+            }
+            pre {
+                word-wrap: break-word;
+            }
+        }
+
+        .md-fences {
+            background-color: #f8f8f8;
+        }
+
+        #write pre.md-meta-block {
+            padding: 1rem;
+            font-size: 85%;
+            line-height: 1.45;
+            background-color: #f7f7f7;
+            border: 0;
+            border-radius: 3px;
+            color: #777777;
+            margin-top: 0 !important;
+        }
+
+        .mathjax-block>.code-tooltip {
+            bottom: .375rem;
+        }
+
+        #write>h3.md-focus:before {
+            left: -1.5625rem;
+            top: .375rem;
+        }
+
+        #write>h4.md-focus:before {
+            left: -1.5625rem;
+            top: .285714286rem;
+        }
+
+        #write>h5.md-focus:before {
+            left: -1.5625rem;
+            top: .285714286rem;
+        }
+
+        #write>h6.md-focus:before {
+            left: -1.5625rem;
+            top: .285714286rem;
+        }
+
+        .md-image>.md-meta {
+            /*border: 1px solid #ddd;*/
+            border-radius: 3px;
+            font-family: Consolas, "Liberation Mono", Courier, monospace;
+            padding: 2px 0px 0px 4px;
+            font-size: 0.9em;
+            color: inherit;
+        }
+
+        .md-tag {
+            color: inherit;
+        }
+
+        .md-toc {
+            margin-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .sidebar-tabs {
+            border-bottom: none;
+        }
+
+        #typora-quick-open {
+            border: 1px solid #ddd;
+            background-color: #f8f8f8;
+        }
+
+        #typora-quick-open-item {
+            background-color: #FAFAFA;
+            border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+            border-style: solid;
+            border-width: 1px;
+        }
+
+        #md-notification:before {
+            top: 10px;
+        }
+
+        /** focus mode */
+        .on-focus-mode blockquote {
+            border-left-color: rgba(85, 85, 85, 0.12);
+        }
+
+        header,
+        .context-menu,
+        .megamenu-content,
+        footer {
+            font-family: "Segoe UI", "Arial", sans-serif;
+        }
+
+        .file-node-content:hover .file-node-icon,
+        .file-node-content:hover .file-node-open-state {
+            visibility: visible;
+        }
+
+        .mac-seamless-mode #typora-sidebar {
+            background-color: #fafafa;
+            background-color: var(--side-bar-bg-color);
+        }
+
+        .md-lang {
+            color: #b4654d;
+        }
+
+        .html-for-mac .context-menu {
+            --item-hover-bg-color: #E6F0FE;
+        }
+
+
+        .typora-export p {
+            white-space: normal;
+        }
+    </style>
+</head>
+
+<body class='typora-export'>
+    <div id='write' class='is-mac'>
+        <h1><a name='header-n0' class='md-header-anchor '></a>NewsAndDebate 이용약관</h1>
+        <h1><a name='header-n7' class='md-header-anchor '></a>제 1장 총칙</h1>
+        <h2><a name='header-n8' class='md-header-anchor '></a>제 1조. 목적</h2>
+        <p>NewsAndDebate를 운영하는 Rarira 입니다. 이 약관에서는 NewsAndDebate 이용에 대한 회사와 서비스 이용자의 권리ㆍ의무 및 책임사항, 기타 필요한 사항을 안내합니다. </p>
+        <h2><a name='header-n11' class='md-header-anchor '></a>제 2조. 용어의 정리</h2>
+        <p>이 약관에서 사용하는 용어는 아래와 같습니다.</p>
+        <ol start=''>
+            <li>&quot;회사&quot;란 NewsAndDebate를 제공하는 사업자인 Rarira를 의미합니다.</li>
+            <li>“서비스”란 단말기(PC, 스마트폰 등)를 통하여 이용할 수 있는 NewsAndDebate 및 관련 제반 서비스를 의미합니다.</li>
+            <li>“회원”이란 이 약관에 따라 이용계약을 체결하고, 회사가 제공하는 서비스를 이용하는 자를 의미합니다.</li>
+            <li>“계정정보”란 회원의 회원번호와 외부계정정보, 기기정보, 이름, 프로필 사진, 이메일 주소,등 회원이 회사에 제공한 정보를 의미합니다.</li>
+            <li>“콘텐츠”란 회원이 NewsAndDebate를 이용하며 생성한 사진, 글 등의 내용물 일체를 의미합니다.</li>
+        </ol>
+        <h2><a name='header-n30' class='md-header-anchor '></a>제 3조. 약관의 효력 및 변경</h2>
+        <p>회사는 약관의 내용을 쉽게 알 수 있도록 서비스 내에 게시합니다. 약관의 변경이 있는 경우 회사는 서비스 내에 개정이유와 적용일자를 게시하여 회원에게 이를 알릴 수 있습니다. 변경된 내용이 회원에게
+            불리하거나 중대한 변경인 경우에는 그 적용일 이전에 회원에게 미리 통지할 수 있습니다.</p>
+        <h2><a name='header-n33' class='md-header-anchor '></a>제 4조. 이용계약의 체결 및 적용</h2>
+        <p>이용계약은 회원이 되고자 하는 자가 이 약관의 내용에 대하여 동의를 한 다음 회원가입을 하고, 회사가 그 신청에 대해서 승낙함으로써 체결됩니다.</p>
+        <h2><a name='header-n36' class='md-header-anchor '></a>제 5조. 약관 외 준칙</h2>
+        <p>이 약관에서 정하지 아니한 사항과 이 약관의 해석에 관하여는 관련 법령 또는 상 관례에 따릅니다.</p>
+        <h1><a name='header-n39' class='md-header-anchor '></a>제 2장 개인정보 관리</h1>
+        <h2><a name='header-n40' class='md-header-anchor '></a>제 6조. 개인정보의 보호 및 사용</h2>
+        <p>회사는 관련 법령이 정하는 바에 따라 회원의 개인정보를 보호하기 위해 노력하며, 개인정보의 보호 및 사용에 대해서는 관련 법령 및 회사의 개인정보처리방침에 따릅니다. 단, 서비스의 특성에 따라 NewsAndDebate를
+            공유하는 회원들간에 회원의 이름, 프로필 사진등이 공개될 수 있습니다. 회사는 회원의 귀책사유로 개인정보가 유출되어 발생한 피해에 대하여 책임을 지지않습니다.</p>
+        <p>&nbsp;</p>
+        <h1><a name='header-n45' class='md-header-anchor '></a>제 3장 이용계약 당사자의 의무</h1>
+        <h2><a name='header-n46' class='md-header-anchor '></a>제 7조. 회사의 의무</h2>
+        <p>회사는 관련 법령, 이 약관에서 정하는 권리의 행사 및 의무의이행을 신의에 따라 성실하게 준수합니다. 회사는 회원이 안전하게 서비스를 이용할 수 있도록 개인정보보호를위해 보안시스템을 갖추어야 하며
+            개인정보처리방침을 공시하고 준수합니다. 회사는 이약관 및 개인정보처리방침에서 정한 경우를 제외하고는 회원의 개인정보가 제3자에게 공개 또는 제공되지 않도록 합니다.</p>
+        <h2><a name='header-n49' class='md-header-anchor '></a>제 8조. 회원의 의무</h2>
+        <p>회원은 회사에서 제공하는 서비스의 이용과 관련하여 다음 각 호에 해당하는 행위를 해서는 안됩니다. </p>
+        <ol start=''>
+            <li>이용신청 또는 회원 정보 변경 시 허위사실을 기재하는 행위</li>
+            <li>다른 회원의 개인정보 및 콘텐츠를 무단으로 수집⋅저장⋅게시 또는 유포하는 행위</li>
+            <li>서비스를 무단으로 영리, 영업, 광고, 홍보, 정치활동, 선거운동 등 본래의 용도 이외의 용도로 이용하는 행위</li>
+            <li>회사의 서비스를 이용하여 얻은 정보를 무단으로 복제․유통․조장하거나 상업적으로이용하는 행위, 알려지거나 알려지지 않은 버그를 악용하여 서비스를 이용하는 행위</li>
+            <li>타인을 기망하여 이득을 취하는 행위, 회사의 서비스의 이용과 관련하여 타인에게 피해를 입히는 행위</li>
+            <li>회사나 타인의 지적재산권 또는 초상권을 침해하는 행위, 타인의 명예를 훼손하거나 손해를 가하는 행위</li>
+            <li>회사로부터 특별한 권리를 부여 받지 않고 애플리케이션을 변경하거나, 애플리케이션에 다른 프로그램을 추가⋅삽입하거나, 서버를 해킹⋅역설계하거나, 소스 코드나 애플리케이션 데이터를 유출⋅변경하거나,
+                별도의 서버를 구축하거나, 웹사이트의 일부분을 임의로 변경⋅도용하여 회사를 사칭하는 행위</li>
+            <li>그 밖에 관련 법령에 위반되거나 선량한 풍속 기타 사회통념에 반하는 행위</li>
+        </ol>
+        <p>회원의 계정 및 모바일 기기에 관한 관리 책임은 회원에게 있으며, 모바일 기기의 관리 부실이나 타인에게 이용을 승낙함으로 인해 발생하는 손해에 대해서 회사는 책임을 지지 않습니다.</p>
+        <h1><a name='header-n79' class='md-header-anchor '></a>제 4장 서비스 이용 및 이용제한</h1>
+        <h2><a name='header-n80' class='md-header-anchor '></a>제11조 서비스의 제공</h2>
+        <p>회사는 이용계약이 완료된 회원에게 서비스를 제공합니다. 회사는 운영 및 기술상의 필요에 따라 서비스를 전체 혹은 일부를 변경, 중단 할 수 있으며, 이에 대해서는 회원에게 별도의 보상을 하지 않습니다.
+            이에 대하여 이 경우 회사는 사전에 그 사유 및 기타 자세한 사항을 서비스 공지사항 화면등에 공지합니다. 다만, 사전에 공지할 수 없는 부득이한 사정이 있는 경우 사후에 공지할 수 있습니다.</p>
+        <h2><a name='header-n83' class='md-header-anchor '></a>제 12조 정보의 수집등</h2>
+        <p>회사는 서비스의 원활하고 안정적인 운영 및 서비스 품질의 개선을 위하여 회원의 개인정보를 제외한 회원의 모바일 기기 정보(설정,사양,운영체제, 버전 등)를 수집 ‧ 활용할수 있습니다.</p>
+        <h2><a name='header-n86' class='md-header-anchor '></a>제 13조 광고의 제공</h2>
+        <p>회사는 서비스의 운영과 관련하여 서비스 내에 광고를게재할 수 있습니다. 또한 수신에 동의한 회원에 한하여 푸시메시지(Push Notification) 등의 방법으로 광고성 정보를 전송할 수 있습니다.
+            이 경우 회원은 언제든지 수신을 거절할 수 있으며, 회사는 회원의 수신 거절 시 광고성 정보를 발송하지 아니합니다.<br/>
+        </p>
+        <p>회사가 제공하는 서비스 중의 배너 또는 링크 등을 통해 타인이 제공하는 광고나 서비스에 연결될 수 있습니다. 타인이 제공하는 광고나 서비스에 연결될 경우 해당 영역에서 제공하는서비스는 회사의 서비스
+            영역이 아니므로 회사가 신뢰성, 안정성 등을 보장하지 않으며, 그로 인한 회원의 손해에 대하여 회사는 책임을 지지 않습니다.</p>
+        <h2><a name='header-n91' class='md-header-anchor '></a>제 14조 저작권 등의 귀속</h2>
+        <p>회사가 제작한 서비스 내의 콘텐츠에 대한 저작권과 기타 지적재산권은 회사에 귀속합니다.</p>
+        <p>회원은 회사가 제공하는 서비스를 이용하여 얻은 정보 중에서 회사에 지적재산권이 귀속된 정보를 회사의 사전 동의 없이 복제⋅전송 등의방법(편집, 공표, 공연, 배포, 방송, 2차적 저작물 작성 등을
+            포함합니다. 이하 같습니다)에 의하여 영리목적으로 이용하거나 타인에게 이용하게 하여서는 안 됩니다.</p>
+        <p>회사는 회원의 명시적인 동의가 없이 회원의 콘텐츠를 이용하지 않으며, 회원은 언제든지 콘텐츠를 삭제할 수 있습니다.</p>
+        <p>회사는 회원의 콘텐츠가 타인의 권리를 침해하거나 피해를 발생할 경우 사전 통지 없이 이를 삭제할 수 있습니다. </p>
+        <p>이 조는 서비스가 운영되는 동안 유효하며, 회원 탈퇴 후에도 지속적으로적용됩니다.</p>
+        <p>&nbsp;</p>
+        <h2><a name='header-n104' class='md-header-anchor '></a>제15조 회원에 대한 서비스 이용제한</h2>
+        <p>회사는 회원이 이 약관의 의무를 위반하거나 서비스의 정상적인 운영을 방해한 경우 서비스 이용을 제한할 수 있습니다. 영구이용정지시 회원이 서비스를 이용하면서 생성한 콘텐츠 등에 접근이 불가하며, 회사는
+            이에 대해 별도로 보상하지 않습니다.</p>
+        <p>&nbsp;</p>
+        <h2><a name='header-n109' class='md-header-anchor '></a>제 16조 계약 해지 등</h2>
+        <p>회원은 언제든지 서비스 이용을 원하지 않는 경우 회원 탈퇴를 통해 이용계약을 해지할 수 있습니다. 회원탈퇴로 인해 회원이 서비스 내에서 생성한 콘텐츠 및 기타 정보는 모두 삭제되어 복구가 불가능하게
+            됩니다.
+        </p>
+        <p>회사는 회원이 이 약관에서 금지하는 행위를 하는 등 본 계약을 유지할 수 없는 중대한 사유가 있는 경우에는 상당한 기간 전에 최고하고 기간을 정하여 서비스 이용을 중지하거나 이용계약을 해지할 수 있습니다.</p>
+        <p>회사는 최근의 서비스 이용일부터 연속하여 1년 동안 회사의 서비스를 이용하지 않은 회원(이하 “휴면계정”이라 합니다)의 개인정보를 보호하기 위해 이용계약을 해지하고 회원의 개인정보 파기 등의 조치를
+            취할 수 있습니다. 이 경우 조치일 30일 전까지 계약해지, 개인정보 파기 등의 조치가 취해진다는 사실 및 파기될 개인정보 등을 회원에게 통지합니다.</p>
+        <p>&nbsp;</p>
+        <h1><a name='header-n118' class='md-header-anchor '></a>제 5장 손해배상 및 면책조항 등</h1>
+        <h2><a name='header-n119' class='md-header-anchor '></a>17 손해배상</h2>
+        <p>회사 또는 회원은 이 약관을 위반하여 상대방에게 손해를 입힌경우에는 그 손해를 배상할 책임이 있습니다. 다만, 고의 또는 과실이 없는 경우에는 그러하지 아니 합니다</p>
+        <p>회사가 개별서비스 제공자와 제휴 계약을 맺고 회원에게 개별서비스를 제공하는 경우에 회원이 이 개별서비스 이용약관에 동의를 한 뒤 개별서비스 제공자의 고의 또는 과실로 인해 회원에게 손해가 발생한 경우에
+            그 손해에 대해서는 개별서비스 제공자가 책임을 집니다.</p>
+        <p>&nbsp;</p>
+        <h2><a name='header-n126' class='md-header-anchor '></a>제 18 조 회사의 면책</h2>
+        <p>회사는 천재지변 또는 이에 준하는 불가항력으로 인하여 서비스를 제공할 수 없는 경우에는 서비스 제공에 관하여 책임을 지지 않습니다.</p>
+        <p>회사는 서비스용 설비의 보수, 교체, 정기점검, 공사 등 기타 이에 준하는 사유로 발생한 손해에 대하여 책임을 지지 않습니다. 다만, 회사의 고의 또는 과실에 의한 경우에는 그러하지 아니합니다.</p>
+        <p>회사는 회원의 고의 또는 과실로 인한 서비스 이용의 장애에 대하여는 책임을 지지 않습니다. 다만, 회원에게 부득이하거나 정당한 사유가 있는 경우에는 그러하지 아니합니다.</p>
+        <p>회원이 서비스와 관련하여 게재한 정보나 자료 등의 신뢰성, 정확성 등에 대하여 회사는 고의 또는 중대한 과실이 없는 한 책임을 지지 않습니다.</p>
+        <p>회사는 회원이 다른 회원 또는 타인과 서비스를 매개로 발생한 거래나 분쟁에 대해 개입할 의무가 없으며, 이로 인한 손해에 대해 책임을 지지 않습니다.</p>
+        <p>회사는 무료로 제공되는 서비스 이용과 관련하여 회원에게 발생한 손해에 대해서는책임을 지지 않습니다.</p>
+        <h2><a name='header-n139' class='md-header-anchor '></a>제19 조 회원에 대한 통지</h2>
+        <p>회사가 회원에게 통지를 하는 경우 회원의 전자우편주소, 서비스내 푸시메시지(Push Notification) 등의 방법 등으로 할 수 있습니다.</p>
+        <h2><a name='header-n142' class='md-header-anchor '></a>제20조 재판권 및 준거법</h2>
+        <p>이 약관은 대한민국 법률에 따라 규율되고 해석됩니다. 회사와 회원 간에 발생한 분쟁으로 소송이 제기되는 경우에는 법령에 정한 절차에 따른 법원을 관할 법원으로 합니다.</p>
+        <h2><a name='header-n145' class='md-header-anchor '></a>제21조 회원의 고충처리 및 분쟁해결</h2>
+        <p>회사는 회원의 편의를 고려하여 회원의 의견이나 불만을 제시하는 방법을 서비스내에 안내합니다.</p>
+        <p>회사는 회원으로부터 제기되는 의견이나 불만이 정당하다고 객관적으로 인정될 경우에는 합리적인 기간 내에 이를 처리합니다.</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <hr />
+        <p>최종갱신일：2018년 09월 02일</p>
+    </div>
+</body>
+
+</html>
