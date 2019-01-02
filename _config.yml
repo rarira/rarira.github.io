@@ -1,6 +1,6 @@
 # main text of home
 name: rarira.studio
-bio: Challenges both web and app based on Javascript and AWS cloud
+bio: Mobile app, from A to Z
 
 # twitter summary info
 # description: A blog about technology and stuff related
@@ -30,8 +30,8 @@ permalink: /:title/
 
 # if you don't want comments in your posts, leave categories empty
 disqus:
-  shortname: mydisqus # enter this from your disqus account
-  categories: [blog, project] # only show disqus for posts that have these categories
+    shortname: mydisqus # enter this from your disqus account
+    categories: [blog, project] # only show disqus for posts that have these categories
 
 # if you don't have any of social below, comment the line
 # facebook: myfacebook
@@ -54,12 +54,12 @@ github: rarira
 email: rariradev@gmail.com
 
 authors:
-  rarira:
-    name: rarira
-    bio: A man has so many interest in so many things, dreamer, INFJ.
-    external-image: false
-    picture: assets/images/profile.jpg
-    twitter: rarira
+    rarira:
+        name: rarira
+        bio: A man has so many interest in so many things, dreamer, INFJ.
+        external-image: false
+        picture: assets/images/profile.jpg
+        twitter: rarira
 
 # do you want a larger site? change the option below
 # options: [normal, large] | default: normal
@@ -96,11 +96,11 @@ show-author: true
 animation: true
 
 plugins:
-  - jekyll-seo-tag
-  - jekyll-gist
-  - jekyll-feed
-  - jemoji
-  - jekyll-admin
+    - jekyll-seo-tag
+    - jekyll-gist
+    - jekyll-feed
+    - jemoji
+    - jekyll-admin
 
 jekyll-mentions:
-  base_url: https://github.com
+    base_url: https://github.com
