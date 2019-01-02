@@ -5,16 +5,15 @@ layout: page
 
 ![Profile Image]({{ site.url }}/{{ site.picture }})
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+# Mobile App : From A to Z
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+Former 
+* Mobile and online game marketer/publisher more than 10 years
+* IT director of various industry such as education, tourism, accomomdation etc.
+* Business consultant
+
+<p>There are lots of full stack developers around the world who can design and develop a nice mobile app for you. But generally speaking, they can't do all the works required before and after the app; business planning, BM strategy, pricing and digital marketing after the launch.</p>
+
+<p>I may not be a good developer, but a junior developer. But I can solve all these business problems with you. I can communicate with anyone using not only tech word but also business man's word.</p>
+
+<p>So please contact me freely if you have any wonderful ideas!</p>
