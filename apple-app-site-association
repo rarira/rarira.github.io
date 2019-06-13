@@ -5,6 +5,10 @@
             {
                 "appID": "TRTH882CN9.com.rarira.issuetoday",
                 "paths": ["/modal/main/news/view/*"]
+            },
+            {
+                "appID":"TRTH882CN9.com.rarira.yogiyogi",
+                "paths": ["*"]
             }
         ]
     }
